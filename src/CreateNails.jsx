@@ -11,7 +11,7 @@ function CreateNails() {
     formData.append("image", file);
 
     try {
-      const response = await fetch("http://localhost:3000/upload", {
+      const response = await fetch("https://unhas.onrender.com/upload", {
         method: "POST",
         body: formData,
       });
@@ -30,7 +30,7 @@ function CreateNails() {
   useEffect(() => {
     async function fetchImages() {
       try {
-        const response = await fetch("http://localhost:3000/images");
+        const response = await fetch("https://unhas.onrender.com/images");
         if (response.ok) {
           const data = await response.json();
           setImages(data.data); // Adjust based on your API response structure
@@ -47,7 +47,6 @@ function CreateNails() {
 
   return (
     <div>
-      <h1 className="text-3xl ">Hello world!</h1>
       <form
         id="uploadForm"
         encType="multipart/form-data"
@@ -71,7 +70,7 @@ function CreateNails() {
         {images.map((image) => (
           <img
             key={image.name}
-            src={`http://localhost:3000/images/${image.name}`}
+            src={`https://unhas.onrender.com/images/${image.name}`}
             alt={image.name}
             className="gallery-image"
           />

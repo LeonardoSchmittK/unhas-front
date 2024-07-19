@@ -13,7 +13,7 @@ function FormAddNewNail() {
     formData.append("image", selectedImage);
 
     try {
-      const response = await fetch("http://localhost:3000/upload/", {
+      const response = await fetch("https://unhas.onrender.com/upload/", {
         method: "POST",
         body: formData,
       });
@@ -35,7 +35,7 @@ function FormAddNewNail() {
     try {
       values["image"] = selectedImage.name;
       console.log(values);
-      const response = await fetch("http://localhost:3000/newNail/", {
+      const response = await fetch("https://unhas.onrender.com/newNail/", {
         method: "POST",
         body: JSON.stringify(values),
         headers: {

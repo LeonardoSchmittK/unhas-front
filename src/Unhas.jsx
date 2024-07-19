@@ -14,7 +14,7 @@ function Unhas() {
   }
 
   async function deleteNails(id) {
-    const response = await fetch(`http://localhost:3000/unhas/${id}`, {
+    const response = await fetch(`https://unhas.onrender.com/unhas/${id}`, {
       method: "DELETE",
     });
     if (response.ok) {
@@ -26,7 +26,7 @@ function Unhas() {
 
   async function fetchData() {
     try {
-      const response = await fetch("http://localhost:3000/unhas/", {
+      const response = await fetch("https://unhas.onrender.com/unhas/", {
         method: "GET",
       });
       const data = await response.json();
