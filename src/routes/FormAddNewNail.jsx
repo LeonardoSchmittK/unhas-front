@@ -139,7 +139,8 @@ function FormAddNewNail() {
               id="image"
               name="image"
               onChange={handleImageChange}
-              className=" pl-0 p-3  "
+              className=" pl-0 p-3"
+              accept=".jpg, .jpeg, .png, .gif, .bmp"
             />
           </div>
 
